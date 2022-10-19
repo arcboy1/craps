@@ -1,0 +1,23 @@
+public static void craps() {
+        int firstRoll=0;
+        firstRoll=rollDice();
+        switch (firstRoll) {
+            case 2,3,12:
+                System.out.println("You lose");
+            case 7,11:
+                System.out.println("You win");
+                break;
+            default:
+                System.out.println("The point is "+firstRoll);
+                int nextRoll;
+                do {
+                    nextRoll=rollDice();
+
+                } while (!(nextRoll==firstRoll || nextRoll==7));
+
+                if (nextRoll==7) {
+                    System.out.println("You lose");
+                }else{
+                    System.out.println("You win");
+
+            }
